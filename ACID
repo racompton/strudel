@@ -1,0 +1,18 @@
+https://strudel.cc/#c2V0Q3BzKDEzMC82MC80KQokOiBzKCJoaCExNiIpLmJhbmsoInRyODA4IikKLl9zY29wZSgpCiQ6IHMoInNiZCE0IikuX3Njb3BlKCkuZHVjaygiMjozOjQiKS5kdWNrYXR0YWNrKC4yKS5kdWNrZGVwdGgoLjgpCiRiYXNzOiBuKGlyYW5kKDEwKS5zdWIoNykuc2VnKDE2KSkuc2NhbGUoImE6bWlub3IiKQoucmliKDQ2LDEpCiAgLmRpc3RvcnQoIjIuMjouMyAiKQoucygic2F3dG9vdGgiKS5scGYoMjAwKS5scGVudihzbGlkZXIoMC4wNjQsMCw4KSkubHBxKDEyKS5vcmJpdCgyKQoubHBxKDEyKS5vcmJpdCgyKS5fcGlhbm9yb2xsKCkKCiQ6IHMoInN1cGVyc2F3IikuZGV0dW5lKDEpLnJlbCg1KS5iZWF0KDIsMzIpLnNsb3coMikub3JiaXQoMykKLmZtKCIyIikuZm1oKDIuMDQpLnJvb20oMSkucm9vbXNpemUoNikuX3BpYW5vcm9sbCgpCgokOiBzKCJwdWxzZSIpLm9yYml0KDQpLnNlZygxNikuZGVjKC4xKS5mbSh0aW1lKS5mbWgodGltZSkucm9vbSgxKS5yb29tc2l6ZSg2KS5fcGlhbm9yb2xsKCkK
+
+//ACID!  Move the slider
+
+setCps(130/60/4)
+$: s("hh!16").bank("tr808")
+._scope()
+$: s("sbd!4")._scope().duck("2:3:4").duckattack(.2).duckdepth(.8)
+$bass: n(irand(10).sub(7).seg(16)).scale("a:minor")
+.rib(46,1)
+  .distort("2.2:.3 ")
+.s("sawtooth").lpf(200).lpenv(slider(0.064,0,8)).lpq(12).orbit(2)
+.lpq(12).orbit(2)._pianoroll()
+
+$: s("supersaw").detune(1).rel(5).beat(2,32).slow(2).orbit(3)
+.fm("2").fmh(2.04).room(1).roomsize(6)._pianoroll()
+
+$: s("pulse").orbit(4).seg(16).dec(.1).fm(time).fmh(time).room(1).roomsize(6)._pianoroll()
